@@ -120,4 +120,17 @@ target/site/checkstyle.html
 mvn -DrepoToken=YOUR-REPO-TOCKEN-ON-COVERALLS  cobertura:cobertura coveralls:report
 ```
 
+# Implementation Details
+```
+This assignment uses the observer pattern to notify drivers of delivery requests.
+The program first start up from the ShopCentralSystem. To start the object, first
+a list of DeliveryRequests objects must first be created and added to a list. 
+Delivery Request objects contain information about to who the product is going, and where it is going to,
+as well as information about the product itself. 
+
+Other shops can notify their own drivers by implementing the ShopObserver and ShopSubject interfaces.
+The ShopSubject interface allows a shop to register drivers of their own choosing,
+while the ShopObserver interface notifies drivers of updated delivery request data.
+
+```
 
